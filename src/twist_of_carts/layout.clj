@@ -39,7 +39,6 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "About"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/resume/"} "Mission Statement"]
          [:a.navbar-item {:href "/about-young-kim-accounting-solutions/"} "About Young Kim Account Solutions"]
          [:a.navbar-item {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
