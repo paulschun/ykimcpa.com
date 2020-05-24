@@ -16,7 +16,7 @@
                   [:div.portrait__caption
                    "Young Shin Kim, CPA"
                    [:div
-                    [:a {:href "/about-young-kim/"} "Learn More About Young &rarr;"]]]]
+                    [:a {:href "/about-young-shin-kim/"} "Learn More About Young &rarr;"]]]]
                  [:div.column
                   [:h1.title "Peace of Mind Is Everything."]
                   [:h2.subtitle "Backed by decades of experience and expertise, Young Kim Accounting Solutions offers accounting and taxation services to address your personal and business needs, wherever in the world you are."]]

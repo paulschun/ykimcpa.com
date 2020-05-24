@@ -45,30 +45,29 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Business Services"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/"} "Tax Return Preparation"]
+         [:a.navbar-item {:href "/"} "Business Tax Return Preparation"]
          [:a.navbar-item {:href "/"} "International Taxation Services"]
          [:a.navbar-item {:href "/"} "International Accounting Services"]
          [:a.navbar-item {:href "/"} "Business Consulting"]
-         [:a.navbar-item {:href "/"} "Tax Planning"]]]
+         [:a.navbar-item {:href "/"} "Business Tax Planning"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Personal Services"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/"} "Tax Return Preparation"]
-         [:a.navbar-item {:href "/"} "Tax Planning"]
+         [:a.navbar-item {:href "/"} "Personal Tax Return Preparation"]
+         [:a.navbar-item {:href "/"} "Personal Tax Planning"]
          ]]
        [:div.navbar-item.has-dropdown.is-hoverable
-        [:span.navbar-link {:href "/"} "Contact"]
+        [:span.navbar-link "Contact"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/contact"} "Send a Private Message"]
          [:a.navbar-item {:href "mailto:ykimtaxcpa@yahoo.com"} "Send an Email"]
-         [:a.navbar-item.hire-me {:href "#" :data-target "hireMeModal"}
+         [:a.navbar-item {:href "/contact/"}
           "All Contact Information"]]
         ]]
       [:div.navbar-end
        [:span.navbar-item
         [:small "Call: (415) 555-5555"]]
        [:div.navbar-item
-        [:span.button.hire-me.ykas-btn {:data-target "hireMeModal"}
+        [:a.button.hire-me.ykas-btn {:href "/contact/"}
          [:i.fas.fa-phone]
          "&nbsp;"
          [:i.fas.fa-envelope]
@@ -76,7 +75,7 @@
     [:div content]
     [:div.midsection-cta
      [:div "Have a question, comment, or want to learn how Young Kim Accounting Solutions can help you, your business or your family?"]
-     [:span.button.hire-me.midsection-cta__btn {:data-target "hireMeModal"}
+     [:a.button.hire-me.midsection-cta__btn {:href "/contact/"}
       [:i.fas.fa-phone]
       "&nbsp;"
       [:i.fas.fa-envelope]
@@ -107,9 +106,8 @@
       [:div.column
        [:span.ykas-footer__nav-list-header "Contact"]
        [:ul.ykas-footer__nav-list
-        [:li [:a {:href "/"} "Send a Message"]]
         [:li [:a {:href "mailto:ykimtaxcpa@yahoo.com"} "Email"]]
-        [:li [:a {:href "/"} "All Contact Information"]]]
+        [:li [:a {:href "/contact/"} "All Contact Information"]]]
        ]
       [:div.column]
       [:div.column
@@ -121,7 +119,6 @@
        [:p "&nbsp;"]
        [:small "Copyright &copy; 2020 Young Kim Accounting Solutions. All rights reserved."]
        ]]]
-
     ]))
 
 (defn cv-layout
