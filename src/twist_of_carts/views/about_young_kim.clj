@@ -5,11 +5,12 @@
 (defn about-young-kim
   "The homepage."
   []
-  {:title "Young Kim Accounting Solutions &mdash; San Francisco-based tax services for local and global endeavors."
+  {:title "Young Kim Accounting Solutions &mdash; About Young Shin Kim"
    :content [:div
              [:section
               [:div.container.pad-vertical
                [:h1.title "About Young Shin Kim"]
+               [:h2.subtitle "The person behind the company."]
                [:div.columns
                 [:div.column
                  [:div.captioned-image

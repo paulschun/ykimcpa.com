@@ -7,6 +7,7 @@
             [twist-of-carts.layout :refer [page-layout cv-layout]]
             [twist-of-carts.views.about-young-kim :refer [about-young-kim]]
             [twist-of-carts.views.blog-post :as bp]
+            [twist-of-carts.views.contact :refer [contact]]
             [twist-of-carts.views.professional-info :as pi]
             [twist-of-carts.views.index :as i]))
 
@@ -39,7 +40,8 @@
   (let [author-data (read-string (slurp "resources/author.edn"))
         resume-data (read-string (slurp "resources/resume.edn"))]
     (merge {"/" (page-layout (i/home))
-            "/about-young-kim/" (page-layout (about-young-kim))
+            "/about-young-shin-kim/" (page-layout (about-young-kim))
+            "/contact/" (page-layout (contact))
             "/resume/" (cv-layout (pi/resume resume-data))
             "/cv/" (cv-layout (pi/cv resume-data))}
            (blog-post-routes blog-posts author-data))))

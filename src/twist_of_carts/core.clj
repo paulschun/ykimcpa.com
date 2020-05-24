@@ -17,7 +17,9 @@
                                 "/css/resume.css"
                                 "/js/main.js"
                                 "/images/portrait.jpg"
-                                "/images/young-hiking.jpg"]))
+                                "/images/young-hiking.jpg"
+                                "/images/skyline-faded.jpg"
+                                "/images/tax-forms.jpg"]))
 
 (def app
   "Server"

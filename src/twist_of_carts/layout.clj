@@ -33,19 +33,7 @@
                          :aria-expanded false
                          :data-target "navMenu"}
        (take 3 (repeat [:span {:aria-hidden true}]))]]
-     [:div#hireMeModal.modal
-      [:header.modal-background]
-      [:section.modal-card
-       [:div.modal-card-head
-        [:p.modal-card-title "Get In Touch"]
-        [:button.delete.modal-close-action {:aria-label "close"}]]
-       [:div.modal-card-body
-        [:div.content
-         [:p "Thank you for considering me for your endeavor! I am eager to learn more about how I can bring my experience, knowledge and enthusiasm to help bring you short-term and long-term success."]]]
-       [:footer.modal-card-foot
-        [:a.button.is-success {:href "mailto:paul@sixofhearts.us"}
-         "Send Me a Proposal"]
-        [:button.button.modal-close-action "Close"]]]]
+
      [:div#navMenu.navbar-menu
       [:div.navbar-start
        [:div.navbar-item.has-dropdown.is-hoverable
@@ -53,7 +41,7 @@
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/resume/"} "Mission Statement"]
          [:a.navbar-item {:href "/about-young-kim-accounting-solutions/"} "About Young Kim Account Solutions"]
-         [:a.navbar-item {:href "/about-young-kim/"} "About Young Kim"]]]
+         [:a.navbar-item {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Business Services"]
         [:div.navbar-dropdown
@@ -73,7 +61,8 @@
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/contact"} "Send a Private Message"]
          [:a.navbar-item {:href "mailto:ykimtaxcpa@yahoo.com"} "Send an Email"]
-         [:a.navbar-item {:href "mailto:paul@sixofhearts.us"} "All Contact Information"]]
+         [:a.navbar-item.hire-me {:href "#" :data-target "hireMeModal"}
+          "All Contact Information"]]
         ]]
       [:div.navbar-end
        [:span.navbar-item
@@ -86,7 +75,7 @@
          "&nbsp;&nbsp;&nbsp;Get In Touch"]]]]]
     [:div content]
     [:div.midsection-cta
-     [:div "Have a question, comment, or want to learn how Young Kim Accounting Solutions can help you?"]
+     [:div "Have a question, comment, or want to learn how Young Kim Accounting Solutions can help you, your business or your family?"]
      [:span.button.hire-me.midsection-cta__btn {:data-target "hireMeModal"}
       [:i.fas.fa-phone]
       "&nbsp;"
@@ -100,7 +89,7 @@
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/"}  "Home"]]
         [:li [:a {:href "/"} "About Young Kim Accounting Solutions"]]
-        [:li [:a {:href "/"} "About Young Kim"]]]
+        [:li [:a {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        ]
       [:div.column
        [:span.ykas-footer__nav-list-header "Business Services"]
@@ -122,6 +111,7 @@
         [:li [:a {:href "mailto:ykimtaxcpa@yahoo.com"} "Email"]]
         [:li [:a {:href "/"} "All Contact Information"]]]
        ]
+      [:div.column]
       [:div.column
        [:p "Young Kim Accounting Solutions"]
        [:p "1 6th Ave"]
@@ -131,7 +121,7 @@
        [:p "&nbsp;"]
        [:small "Copyright &copy; 2020 Young Kim Accounting Solutions. All rights reserved."]
        ]]]
-    (include-js "/js/main.js")
+
     ]))
 
 (defn cv-layout

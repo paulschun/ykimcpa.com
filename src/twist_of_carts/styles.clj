@@ -17,8 +17,8 @@
   (let [{:keys [soot pewter plant sahara snow-1 black white]} colors]
     [[:html
       {:background-color snow-1}]
-     [:body {:color soot}]
-     [:.ykas-nav :.ykas-footer {:background-color plant :font-family "Georgia"}
+     [:body {:color soot :font-family "Georgia"}]
+     [:.ykas-nav :.ykas-footer {:background-color plant}
       [:a :span {:color soot}]
       [:.logo:hover {:color black}]
       [:.navbar-link:hover {:background-color sahara
@@ -56,8 +56,29 @@
                 :margin-top "1em"}
        [:&:hover {:color black
                   :border-color black}]]]
-
-
+     [:.ykas-hero {:background "url('/images/skyline-faded.jpg')"
+                   :background-size "cover"}]
+     [:.ykas-hero-black {:background-color soot
+                         :color sahara
+                         :background-size "cover"}
+      [:a {:color white}]
+      [:.title {:color white}]
+      [:.subtitle {:color sahara}]]
+     [:.ykas-hero :.ykas-hero-black
+      [:.subtitle {:line-height "2em"}]]
+     [:.ykas-hero-header {:font-size "1.5em"}]
+     [:.ykas-hero-list
+      [:li {:line-height "2.5em"}]]
+     [:.portrait {:text-align "center"}
+      [:img {:border-radius "50%"
+             :border (str "5px solid " sahara)}]
+      [:&__caption {:text-align "center"
+                    :margin-bottom "10em"}
+       [:a {:color soot}]]]
+     [:.contact
+      [:&__instructions {:font-size "0.9em"}]
+      [:&__number {:font-size "1.25em"
+                   :margin-bottom "2em"}]]
      ]))
 
 (defstyles resume)
