@@ -11,8 +11,6 @@
              :white "#FFFFFF"
              :black "#000000"})
 
-(defpseudoelement after)
-
 (defstyles main
   (let [{:keys [soot pewter plant sahara snow-1 black white]} colors]
     [[:html
@@ -79,6 +77,12 @@
       [:&__instructions {:font-size "0.9em"}]
       [:&__number {:font-size "1.25em"
                    :margin-bottom "2em"}]]
-     ]))
-
-(defstyles resume)
+     [:.landing-page
+      [:&__description {:line-height "1.75em"}
+       [:a {:color soot}]
+       [:p {:margin-top "1.75em"}]
+       [:ul.landing-page__references {:line-height "2.5em"}]
+       [:.subtitle {:margin-top "1.75em"}]]
+      [:&__number {:font-size "1.25em"
+                   :margin-bottom "2em"}]]
+     [:.green-check {:color "limegreen"}]]))

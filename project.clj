@@ -9,6 +9,7 @@
                  [lein-ring "0.9.7"]
                  [hiccup "1.0.5"]
                  [optimus "0.20.2"]
+                 [org.clojure/data.csv "1.0.0"]
                  [clj-time "0.15.2"]
                  [digest "1.4.5"]
                  [endophile "0.2.1"]

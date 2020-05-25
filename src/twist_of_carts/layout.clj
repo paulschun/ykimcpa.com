@@ -1,24 +1,12 @@
 (ns twist-of-carts.layout
   (:require [hiccup.page :refer [html5 include-css include-js]]))
 
-(defn google-analytics
-  ""
-  []
-  [:script
-   "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-67228281-1', 'auto');
-      ga('send', 'pageview');"])
-
-(defn page-layout
+(defn bare-layout
   "Render a page with the shared layout."
   [{title :title, content :content}]
   (html5
    {:lang "en"}
    [:head
-    (google-analytics)
     [:title title]
     (include-css "https://fonts.googleapis.com/css?family=Catamaran:200")
     (include-css "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css")
@@ -33,7 +21,6 @@
                          :aria-expanded false
                          :data-target "navMenu"}
        (take 3 (repeat [:span {:aria-hidden true}]))]]
-
      [:div#navMenu.navbar-menu
       [:div.navbar-start
        [:div.navbar-item.has-dropdown.is-hoverable
@@ -72,14 +59,6 @@
          [:i.fas.fa-envelope]
          "&nbsp;&nbsp;&nbsp;Get In Touch"]]]]]
     [:div content]
-    [:div.midsection-cta
-     [:div "Have a question, comment, or want to learn how Young Kim Accounting Solutions can help you, your business or your family?"]
-     [:a.button.hire-me.midsection-cta__btn {:href "/contact/"}
-      [:i.fas.fa-phone]
-      "&nbsp;"
-      [:i.fas.fa-envelope]
-      "&nbsp;&nbsp;&nbsp;Get In Touch"]
-     ]
     [:footer.footer.ykas-footer
      [:div.columns
       [:div.column
@@ -120,13 +99,25 @@
        ]]]
     ]))
 
-(defn cv-layout
-  "Render a page with the shared layout."
-  [{title :title, content :content}]
-  (html5
-   [:head
-    [:title title]
-    (google-analytics)
-    (include-css "/css/resume.css")]
-   [:body
-    [:div.container content]]))
+(defn wrap-content-with-cta [content]
+  [:div
+   [:div content]
+   [:div.midsection-cta
+     [:div "Have a question, comment, or want to learn how Young Kim Accounting Solutions can help you, your business or your family?"]
+     [:a.button.hire-me.midsection-cta__btn {:href "/contact/"}
+      [:i.fas.fa-phone]
+      "&nbsp;"
+      [:i.fas.fa-envelope]
+      "&nbsp;&nbsp;&nbsp;Get In Touch"]]])
+
+(defn wrap-content-with-testimonial [content]
+  [:div
+   [:div content]
+   [:div.midsection-cta
+    [:h1 "Testimonial"]]])
+
+(defn page-layout [options]
+  (bare-layout (update options :content wrap-content-with-cta)))
+
+(defn testimonial-bottom-layout [options]
+  (bare-layout (update options :content wrap-content-with-testimonial)))

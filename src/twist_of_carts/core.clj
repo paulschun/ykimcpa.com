@@ -1,25 +1,29 @@
 (ns twist-of-carts.core
-  (:require [ring.middleware.content-type :refer [wrap-content-type]]
-            [stasis.core :as stasis]
-            [optimus.prime :as optimus]
-            [optimus.assets :as assets]
-            [optimus.optimizations :as optimizations]
-            [optimus.strategies :refer [serve-live-assets]]
-            [optimus.export]
-            [twist-of-carts.app :refer [get-pages]]))
+  (:require
+   [clojure.java.io :as io]
+   [ring.middleware.content-type :refer [wrap-content-type]]
+   [stasis.core :as stasis]
+   [optimus.prime :as optimus]
+   [optimus.assets :as assets]
+   [optimus.optimizations :as optimizations]
+   [optimus.strategies :refer [serve-live-assets]]
+   [optimus.export]
+   [twist-of-carts.app :refer [get-pages]]))
 
 (def target-dir
   "Where to tuck these files into"
   "target/build")
 
 (defn get-assets []
-  (assets/load-assets "public" ["/css/main.css"
-                                "/css/resume.css"
-                                "/js/main.js"
-                                "/images/portrait.jpg"
-                                "/images/young-hiking.jpg"
-                                "/images/skyline-faded.jpg"
-                                "/images/tax-forms.jpg"]))
+  (let [images (->> (io/file "resources/public/images")
+                    file-seq
+                    (filter #(.endsWith (.getName %) ".jpg"))
+                    (map #(subs (.getPath %) (count "resources/public"))))]
+    (assets/load-assets
+     "public"
+     (apply conj ["/css/main.css"
+                  "/css/resume.css"
+                  "/js/main.js"] images))))
 
 (def app
   "Server"
