@@ -1,12 +1,41 @@
 (ns twist-of-carts.layout
   (:require [hiccup.page :refer [html5 include-css include-js]]))
 
+(def young-kim-quote
+  [:div.section.yk-quote
+   [:div.container
+    [:div.columns
+     [:div.column
+      [:div.yk-quote__highlight
+       [:div.yk-quote__figure "95%"]
+       [:p.yk-quote__text "Clients who remain with Young Kim Accounting Solutions after the first year"]]]
+     [:div.column
+      [:div.yk-quote__highlight
+       [:div.yk-quote__figure "65%"]
+       [:p.yk-quote__text "Clients referred via word-of-mouth from other happy clients"]]]
+     [:div.column
+      [:div.yk-quote__highlight
+       [:div.yk-quote__figure "25"]
+       [:p.yk-quote__text "Years of international accounting and taxation services provided"]]]]
+    [:div
+     [:p.yk-quote__quote "&ldquo;My model has always been simple: maintaining long-term relationships with great clients built on trust by consistently providing excellence.&rdquo;"]
+     [:div.portrait
+      [:img {:src "/images/portrait.jpg"}]
+      [:div
+       [:p "Young Shin Kim, CPA"]
+       [:a {:href "/about-young-shin-kim/"} "Learn More About Young &rarr;"]]
+      ]
+     ]]
+   ])
+
 (defn bare-layout
   "Render a page with the shared layout."
   [{title :title, content :content}]
   (html5
    {:lang "en"}
    [:head
+    [:meta {:name "viewport" :content "width=device-width"}]
+    [:meta {:name "viewport" :content "initial-scale=1.0"}]
     [:title title]
     (include-css "https://fonts.googleapis.com/css?family=Catamaran:200")
     (include-css "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css")
@@ -26,7 +55,7 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "About"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/about-young-kim-accounting-solutions/"} "About Young Kim Account Solutions"]
+         [:a.navbar-item {:href "/about/"} "About Young Kim Account Solutions"]
          [:a.navbar-item {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Business Services"]
@@ -39,7 +68,7 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Personal Services"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/"} "Personal Tax Return Preparation"]
+         [:a.navbar-item {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]
          [:a.navbar-item {:href "/"} "Personal Tax Planning"]
          ]]
        [:div.navbar-item.has-dropdown.is-hoverable
@@ -59,13 +88,14 @@
          [:i.fas.fa-envelope]
          "&nbsp;&nbsp;&nbsp;Get In Touch"]]]]]
     [:div content]
+    young-kim-quote
     [:footer.footer.ykas-footer
      [:div.columns
       [:div.column
        [:span.ykas-footer__nav-list-header "Young Kim Accounting Solutions"]
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/"}  "Home"]]
-        [:li [:a {:href "/"} "About Young Kim Accounting Solutions"]]
+        [:li [:a {:href "/about/"} "About Young Kim Accounting Solutions"]]
         [:li [:a {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        ]
       [:div.column
@@ -79,7 +109,7 @@
       [:div.column
        [:span.ykas-footer__nav-list-header "Personal Services"]
        [:ul.ykas-footer__nav-list
-        [:li [:a {:href "/"} "Tax Return Preparation"]]
+        [:li [:a {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]]
         [:li [:a {:href "/"} "Tax Planning"]]]]
       [:div.column
        [:span.ykas-footer__nav-list-header "Contact"]
@@ -97,6 +127,7 @@
        [:p "&nbsp;"]
        [:small "Copyright &copy; 2020 Young Kim Accounting Solutions. All rights reserved."]
        ]]]
+    [:script {:src "/js/main.js"}]
     ]))
 
 (defn wrap-content-with-cta [content]

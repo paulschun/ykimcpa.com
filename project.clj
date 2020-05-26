@@ -29,15 +29,4 @@
                      :compiler {;; Where to save the file:
                                 :output-to "resources/public/css/main.css"
                                 ;; Compress the output?
-                                :pretty-print? false}}
-                    {;; Optional name of the build:
-                     :id "resume"
-                     ;; Source paths where the stylesheet source code is
-                     :source-paths ["src"]
-                     ;; The var containing your stylesheet:
-                     :stylesheet twist-of-carts.styles/resume
-                     ;; Compiler flags passed to `garden.core/css`:
-                     :compiler {;; Where to save the file:
-                                :output-to "resources/public/css/resume.css"
-                                ;; Compress the output?
                                 :pretty-print? false}}]})

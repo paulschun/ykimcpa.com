@@ -21,38 +21,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  const $hireMeButtons = Array.prototype.slice.call(document.querySelectorAll('.hire-me'), 0);
-
-  if ($hireMeButtons.length > 0) {
-
-    $hireMeButtons.forEach( function(el) {
-      el.addEventListener('click', function() {
-
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const $modalCloseButtons = Array.prototype.slice.call(document.querySelectorAll('.modal-close-action'), 0);
-  if ($modalCloseButtons.length > 0) {
-    $modalCloseButtons.forEach( function(el) {
-      el.addEventListener('click', function() {
-        const $targets = Array.prototype.slice.call(document.querySelectorAll('.modal'), 0);
-        if ($targets.length > 0) {
-          $targets.forEach(function(target) {
-            target.classList.remove('is-active');
-          });
-        }
-      });
-    });
-  }
-});

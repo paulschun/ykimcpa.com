@@ -1,7 +1,6 @@
 (ns twist-of-carts.styles
   (:require
-   [garden.def :refer [defstyles]]
-   [garden.selectors :refer [defpseudoelement]]))
+   [garden.def :refer [defstyles]]))
 
 (def colors {:soot "#606060"
              :pewter "#6E8196"
@@ -85,4 +84,28 @@
        [:.subtitle {:margin-top "1.75em"}]]
       [:&__number {:font-size "1.25em"
                    :margin-bottom "2em"}]]
-     [:.green-check {:color "limegreen"}]]))
+     [:.information-page {:line-height "1.75em"}
+      [:p {:margin-top "1.75em"}]]
+     [:.green-check {:color "limegreen"}]
+     [:.yk-quote {:background-color soot
+                  :color sahara}
+      [:&__highlight {:background-color sahara
+                      :color soot
+                      :margin "0 auto"
+                      :border-radius "50%"
+                      :display "flex"
+                      :flex-direction "column"
+                      :justify-content "center"
+                      :text-align "center"
+                      :height "240px"
+                      :width "240px"}]
+      [:&__figure {:font-size "3em"}]
+      [:&__quote {:font-style "italic"
+                  :font-size "1.5em"
+                  :text-align "center"
+                  :margin "1.5em 1em"}]
+      [:&__text {:text-size "0.9em"
+                 :margin "0 1.5em"}]
+      [:a {:color sahara}]
+      ]
+     ]))

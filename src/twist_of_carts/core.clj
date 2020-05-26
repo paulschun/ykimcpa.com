@@ -22,7 +22,6 @@
     (assets/load-assets
      "public"
      (apply conj ["/css/main.css"
-                  "/css/resume.css"
                   "/js/main.js"] images))))
 
 (def app
