@@ -9,6 +9,7 @@
             [twist-of-carts.views.about-ykas :refer [about-ykas]]
             [twist-of-carts.views.about-young-kim :refer [about-young-kim]]
             [twist-of-carts.views.blog-post :as bp]
+            [twist-of-carts.views.international-tax-services :refer [international-tax-services]]
             [twist-of-carts.views.korean-city :refer [korean-city]]
             [twist-of-carts.views.contact :refer [contact]]
             [twist-of-carts.views.personal-tax-return :refer [personal-tax-return]]
@@ -45,6 +46,7 @@
    {"/" (page-layout (i/home))
     "/about/" (page-layout (about-ykas))
     "/about-young-shin-kim/" (page-layout (about-young-kim))
+    "/international-tax-services/" (page-layout (international-tax-services))
     "/personal-tax-return-preparation/" (page-layout (personal-tax-return))
     "/contact/" (bare-layout (contact))}
    korean-city-routes))

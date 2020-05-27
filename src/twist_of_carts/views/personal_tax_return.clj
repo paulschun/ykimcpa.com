@@ -1,5 +1,6 @@
 (ns twist-of-carts.views.personal-tax-return
   (:require [digest :as digest]
+            [twist-of-carts.components.green-checklist :refer [green-checklist]]
             [twist-of-carts.util :refer [short-date slug-path]]))
 
 (def forms
@@ -20,17 +21,10 @@
    "US Green Card holders"
    "US tax residents"])
 
-(defn green-check [s]
-  [:li
-   [:span.green-check
-    [:i.fas.fa-check]]
-   "&nbsp;&nbsp;&nbsp;"
-   s])
-
 (defn personal-tax-return
   "The homepage."
   []
-  {:title "Young Kim Accounting Solutions &mdash; Service Provided for Personal Tax Returns"
+  {:title "Young Kim Accounting Solutions &mdash; Personal Tax Returns"
    :content
    [:div
     [:section
@@ -40,13 +34,13 @@
       [:div.columns
        [:div.column.information-page
         [:p "Given the complicated nature of the seemingly endless tax rules and regulations, it's understandable that filing taxes can be tiring, stressful or overwhelming. That's why Young Kim Accounting Solutions is here to help you navigate your tax filings."]
-        [:p "The following is just a few of the documents that Young Kim Accounting Solutions offers tax services to help you complete:"]
-        [:ul
-         (map green-check forms)]
         [:p "Services are provided for all:"]
-        [:ul
-         (map green-check eligible-people)]
-        [:p "Get in touch today if you'd like to learn more about how Young Kim Accounting Solutions can help you."]]
+        (green-checklist eligible-people)
+        [:p "The following is just a few of the documents that Young Kim Accounting Solutions offers tax services to help you complete:"]
+        (green-checklist forms)
+        [:p "If you'd like to learn more about how Young Kim Accounting Solutions can help you, "
+         [:a {:href "/contact/"} "get in touch today"]
+         "."]]
        [:div.column
         [:div.captioned-image
          [:img {:src "/images/invoice-stamp.jpg"}]]]]]]]})

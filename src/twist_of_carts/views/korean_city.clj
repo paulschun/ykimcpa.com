@@ -1,4 +1,6 @@
-(ns twist-of-carts.views.korean-city)
+(ns twist-of-carts.views.korean-city
+  (:require
+   [twist-of-carts.components.green-checklist :refer [green-checklist]]))
 
 (defn korean-city [{:keys [place image-url image-description far-away-from]}]
   {:title (str "Young Kim Accounting Solutions &mdash; American Tax Accountant Services for Residents of " place)
@@ -35,26 +37,14 @@
                    [:li [:a {:href "/"} "Personal Tax Return Preparation &rarr;"]]
                    [:li [:a {:href "/"} "Personal Tax Planning &rarr;"]]]
          ]
-        [:p "Young Kim Accounting Solutions proudly provides services to:"
-         [:ul
-          [:li
-           [:span.green-check
-            [:fa.fas.fa-check]]
-           "&nbsp;&nbsp;&nbsp;"
-           "US Citizens"]
-          [:li
-           [:span.green-check
-            [:fa.fas.fa-check]]
-           "&nbsp;&nbsp;&nbsp;"
-           "US Green Card Holders"]
-          [:li
-           [:span.green-check
-            [:fa.fas.fa-check]]
-           "&nbsp;&nbsp;&nbsp;"
-           "US Tax Residents"]]]
+        [:p "Young Kim Accounting Solutions proudly provides services to:"]
+        (green-checklist ["US Citizens" "US Green Card Holders" "US Tax Residents"])
+        [:p "If you think Young Kim Accounting Solutions can help you, "
+         [:a {:href "/contact/"} "get in touch today"]
+         "."]
         ]
        [:div.column
         [:div.captioned-image
          [:img {:src (str "/images/korea-photos/" image-url)}]
          [:div.captioned-image__caption image-description]]]]
-      [:div.hero]]]]})
+      ]]]})

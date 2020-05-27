@@ -55,13 +55,13 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "About"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/about/"} "About Young Kim Account Solutions"]
+         [:a.navbar-item {:href "/about/"} "About Young Kim Accounting Solutions"]
          [:a.navbar-item {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Business Services"]
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/"} "Business Tax Return Preparation"]
-         [:a.navbar-item {:href "/"} "International Taxation Services"]
+         [:a.navbar-item {:href "/international-tax-services/"} "International Tax Services"]
          [:a.navbar-item {:href "/"} "International Accounting Services"]
          [:a.navbar-item {:href "/"} "Business Consulting"]
          [:a.navbar-item {:href "/"} "Business Tax Planning"]]]
@@ -102,7 +102,7 @@
        [:span.ykas-footer__nav-list-header "Business Services"]
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/"} "Tax Return Preparation"]]
-        [:li [:a {:href "/"} "International Taxation Services"]]
+        [:li [:a {:href "/international-tax-services/"} "International Tax Services"]]
         [:li [:a {:href "/"} "International Accounting Services"]]
         [:li [:a {:href "/"} "Business Consulting"]]
         [:li [:a {:href "/"} "Tax Planning"]]]]
