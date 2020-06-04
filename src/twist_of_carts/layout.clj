@@ -64,20 +64,15 @@
          [:a.navbar-item {:href "/international-tax-services/"} "International Tax Services"]
          [:a.navbar-item {:href "/"} "International Accounting Services"]
          [:a.navbar-item {:href "/"} "Business Consulting"]
-         [:a.navbar-item {:href "/"} "Business Tax Planning"]]]
+         [:a.navbar-item {:href "/business-tax-planning/"} "Business Tax Planning"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Personal Services"]
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]
          [:a.navbar-item {:href "/"} "Personal Tax Planning"]
          ]]
-       [:div.navbar-item.has-dropdown.is-hoverable
-        [:span.navbar-link "Contact"]
-        [:div.navbar-dropdown
-         [:a.navbar-item {:href "mailto:ykimtaxcpa@yahoo.com"} "Send an Email"]
-         [:a.navbar-item {:href "/contact/"}
-          "All Contact Information"]]
-        ]]
+       [:a.navbar-item {:href "/contact/"}
+          "Contact Us"]]
       [:div.navbar-end
        [:span.navbar-item
         [:small "Call: (415) 555-5555"]]
@@ -105,7 +100,7 @@
         [:li [:a {:href "/international-tax-services/"} "International Tax Services"]]
         [:li [:a {:href "/"} "International Accounting Services"]]
         [:li [:a {:href "/"} "Business Consulting"]]
-        [:li [:a {:href "/"} "Tax Planning"]]]]
+        [:li [:a {:href "/business-tax-planning/"} "Tax Planning"]]]]
       [:div.column
        [:span.ykas-footer__nav-list-header "Personal Services"]
        [:ul.ykas-footer__nav-list

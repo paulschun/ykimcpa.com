@@ -17,7 +17,30 @@
                   "Email"]
                  [:div
                   [:p "Send an email at any time for a prompt response."]
-                  [:a {:href "mailto:ykimtaxcpa@yahoo.com"} "ykimtaxcpa@yahoo.com"]]
+                  [:form.contact-form {:action "https://formspree.io/mnqgdqya"
+                          :method "POST"
+                                       :enctype "multipart/form-data"}
+                   [:label
+                    "Full Name"
+                    [:input {:type "text"
+                             :name "_name"
+                             :placeholder ""}]]
+                   [:label
+                    "Email Address"
+                    [:input {:type "text"
+                             :name "_replyto"
+                             :placeholder ""}]]
+                   [:label
+                    "Subject"
+                    [:input {:type "text"
+                             :name "_subject"
+                             :placeholder ""}]]
+                   [:label
+                    "Message"
+                    [:textarea {:name "_message"
+                                :placeholder "I'd like to inquire about..."}]]
+                   [:button {:type "submit"} "Send Message &rarr;"]
+                   ]]
                  ]
                 [:div.column
                  [:h3.subtitle
@@ -43,7 +66,6 @@
                   [:div "Young Kim Accounting Solutions"]
                   [:div "550 6th Ave"]
                   [:div "San Francisco, CA 94118"]
-                  [:div "USA"]]
-                 ]
-]]]
+                  [:div "United States of America"]]
+                 ]]]]
              ]})

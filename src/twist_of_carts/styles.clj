@@ -16,7 +16,8 @@
       {:background-color snow-1}]
      [:body {:color soot :font-family "Georgia"}]
      [:.ykas-nav :.ykas-footer {:background-color plant}
-      [:a :span {:color soot}]
+      [:a :span {:color soot}
+       [:&:hover {:color black}]]
       [:.logo:hover {:color black}]
       [:.navbar-link:hover {:background-color sahara
                             :color black}]
@@ -107,5 +108,22 @@
       [:&__text {:text-size "0.9em"
                  :margin "0 1.5em"}]
       [:a {:color sahara}]
+      ]
+     [:.contact-form
+      [:label {:display "block"
+               :margin-top "1em"}]
+      [:input :textarea :button {:width "100%"
+                                 :font-size "14pt"
+                                 :font-family "Georgia"
+                                 :padding "0.25em"}]
+      [:button {:background-color soot
+                :color snow-1
+                :border 0
+                :outline 0
+                :border-radius "5px"
+                :margin-top "1em"
+                :cursor "pointer"
+                :transition "background-color .5s"}
+       [:&:hover {:background-color black}]]
       ]
      ]))

@@ -11,6 +11,7 @@
             [twist-of-carts.views.blog-post :as bp]
             [twist-of-carts.views.international-tax-services :refer [international-tax-services]]
             [twist-of-carts.views.korean-city :refer [korean-city]]
+            [twist-of-carts.views.business-tax-planning :refer [business-tax-planning]]
             [twist-of-carts.views.contact :refer [contact]]
             [twist-of-carts.views.personal-tax-return :refer [personal-tax-return]]
             [twist-of-carts.views.professional-info :as pi]
@@ -47,6 +48,7 @@
     "/about/" (page-layout (about-ykas))
     "/about-young-shin-kim/" (page-layout (about-young-kim))
     "/international-tax-services/" (page-layout (international-tax-services))
+    "/business-tax-planning/" (page-layout (business-tax-planning))
     "/personal-tax-return-preparation/" (page-layout (personal-tax-return))
     "/contact/" (bare-layout (contact))}
    korean-city-routes))
