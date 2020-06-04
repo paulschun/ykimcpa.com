@@ -33,11 +33,11 @@
       [:h2.subtitle "We'll help you navigate your tax situation for an ideal outcome."]
       [:div.columns
        [:div.column.information-page
-        [:p "Given the complicated nature of the seemingly endless tax rules and regulations, it's understandable that filing taxes can be tiring, stressful or overwhelming. That's why Young Kim Accounting Solutions is here to help you navigate your tax filings."]
-        [:p "Services are provided for all:"]
-        (green-checklist eligible-people)
+        [:p "Are you one of many American taxpayers who just thinks personal taxes means filing a 1040 some time before the end of the tax deadline in April? Regardless, you probably know that, due to seemingly endless tax rules and regulations, taking care of personal taxes can be intimidating, stressful or overwhelming. And what's worse: without a custom-tailored tax strategy, you could be losing out on a lot of money that you've earned and to which you're entitled."]
+        [:p "Young Kim Accounting Solutions boasts over twenty-five years of experience helping individuals and families clarify what benefits they're entitled to in order to minimize tax liability, with our online filing system ensuring that you get your refund as quickly as possible. Services are provided for all:"]
+        [:p (green-checklist eligible-people)]
         [:p "The following is just a few of the documents that Young Kim Accounting Solutions offers tax services to help you complete:"]
-        (green-checklist forms)
+        [:p (green-checklist forms)]
         [:p "If you'd like to learn more about how Young Kim Accounting Solutions can help you, "
          [:a {:href "/contact/"} "get in touch today"]
          "."]]
