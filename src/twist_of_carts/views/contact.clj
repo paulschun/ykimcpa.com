@@ -10,6 +10,7 @@
                [:h1.title "Contact Young Kim Account Solutions"]
                [:h2.subtitle "Want to get in touch? Here are your options:"]
                [:div.columns
+
                 [:div.column
                  [:h3.subtitle
                   [:small [:i.fas.fa-at]]
@@ -27,7 +28,7 @@
                              :placeholder ""}]]
                    [:label
                     "Email Address"
-                    [:input {:type "text"
+                    [:input {:type "email"
                              :name "_replyto"
                              :placeholder ""}]]
                    [:label
@@ -57,15 +58,17 @@
                  [:p.contact__instructions "Fax availability is 24 hours a day."]
                  [:div.contact__number "+1 (415) 221-8222"]
                  ]
-                [:div.column
+                                [:div.column
                  [:h3.subtitle
                   [:small [:i.fas.fa-envelope]]
                   "&nbsp;&nbsp;"
                   "Mailing Address"]
-                 [:div
+                 [:h3.subtitle [:small "Mail your inquiries to:"]]
+                 [:p
                   [:div "Young Kim Accounting Solutions"]
                   [:div "550 6th Ave"]
                   [:div "San Francisco, CA 94118"]
                   [:div "United States of America"]]
-                 ]]]]
+                 ]
+                ]]]
              ]})
