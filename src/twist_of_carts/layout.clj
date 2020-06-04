@@ -91,7 +91,8 @@
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/"}  "Home"]]
         [:li [:a {:href "/about/"} "About Young Kim Accounting Solutions"]]
-        [:li [:a {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]]
+        [:li [:a {:href "/about-young-shin-kim/"} "About Young Shin Kim"]]
+        [:li [:a {:href "/contact/"} "Contact Us"]]]
        ]
       [:div.column
        [:span.ykas-footer__nav-list-header "Business Services"]
@@ -106,12 +107,6 @@
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]]
         [:li [:a {:href "/"} "Tax Planning"]]]]
-      [:div.column
-       [:span.ykas-footer__nav-list-header "Contact"]
-       [:ul.ykas-footer__nav-list
-        [:li [:a {:href "mailto:ykimtaxcpa@yahoo.com"} "Email"]]
-        [:li [:a {:href "/contact/"} "All Contact Information"]]]
-       ]
       [:div.column]
       [:div.column
        [:p "Young Kim Accounting Solutions"]

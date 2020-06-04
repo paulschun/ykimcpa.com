@@ -14,7 +14,8 @@
                  [digest "1.4.5"]
                  [endophile "0.2.1"]
                  [frontmatter "0.0.1"]
-                 [garden "1.3.9"]]
+                 [garden "1.3.9"]
+                 [org.clojure/data.xml "0.0.8"]]
   :plugins [[lein-ring "0.9.7"]
             [lein-garden "0.3.0"]]
   :ring {:handler twist-of-carts.core/app}

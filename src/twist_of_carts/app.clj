@@ -2,6 +2,7 @@
   (:require [twist-of-carts.util :refer [slug-path]]
             [clojure.string :as str]
             [clojure.data.csv :as csv]
+            [clojure.data.xml :as xml]
             [clojure.java.io :as io]
             [endophile.hiccup :refer [to-hiccup]]
             [frontmatter.core :as fm]
@@ -31,24 +32,40 @@
         doall
         csv-data->maps)))
 
-(defn- korean-city-to-key-value [{:keys [place] :as korean-city-options}]
+(defn- korean-city-to-sitemap-row [{:keys [place] :as korean-city-options}]
   [(str "/us-accountant-" (str/lower-case place) "/")
-   (fn [_] (page-layout (korean-city korean-city-options)))])
+   (fn [_] (page-layout (korean-city korean-city-options)))
+   0.9])
 
 (def korean-city-routes
-  (->> korean-city-data
-       (map korean-city-to-key-value)
-       (into {})))
+  (map korean-city-to-sitemap-row korean-city-data))
+
+(def pagerows
+  (apply
+   conj
+   [["/" (page-layout (i/home)) 1.0]
+    ["/about/" (page-layout (about-ykas)) 0.2]
+    ["/about-young-shin-kim/" (page-layout (about-young-kim)) 0.2]
+    ["/international-tax-services/" (page-layout (international-tax-services)) 0.2]
+    ["/business-tax-planning/" (page-layout (business-tax-planning)) 0.2]
+    ["/personal-tax-return-preparation/" (page-layout (personal-tax-return)) 0.2]
+    ["/contact/" (bare-layout (contact)) 0.2]]
+   korean-city-routes))
+
+(defn pagerow->sitemap-url [[path _ priority]]
+  [:url
+   [:loc (str "https://youngshinkim.com" path)]
+   [:priority priority]])
+
+(def sitemap
+  (xml/emit-str
+   (xml/sexp-as-element
+      [:urlset (map pagerow->sitemap-url pagerows)])))
 
 (defn get-pages
   "Get routes for this blog."
   []
-  (merge
-   {"/" (page-layout (i/home))
-    "/about/" (page-layout (about-ykas))
-    "/about-young-shin-kim/" (page-layout (about-young-kim))
-    "/international-tax-services/" (page-layout (international-tax-services))
-    "/business-tax-planning/" (page-layout (business-tax-planning))
-    "/personal-tax-return-preparation/" (page-layout (personal-tax-return))
-    "/contact/" (bare-layout (contact))}
-   korean-city-routes))
+  (->> pagerows
+       (map #(take 2 %))
+       (map vec)
+       (into {"/sitemap.xml" sitemap})))
