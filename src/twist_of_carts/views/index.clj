@@ -34,8 +34,7 @@
                   [:ul.ykas-hero-list
                    [:li [:a {:href "/business-tax-return-preparation/"} "Business Tax Return Preparation &rarr;"]]
                    [:li [:a {:href "/business-tax-planning/"} "Business Tax Planning &rarr;"]]
-                   [:li [:a {:href "/international-tax-services/"} "International Tax &amp; Accounting Services &rarr;"]]
-]]
+                   [:li [:a {:href "/international-tax-services/"} "International Tax &amp; Accounting Services &rarr;"]]]]
                  [:div.column
                   [:div.ykas-hero-header "Personal Services"]
                   [:ul.ykas-hero-list
