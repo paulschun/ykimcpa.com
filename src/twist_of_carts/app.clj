@@ -16,6 +16,7 @@
             [twist-of-carts.views.business-tax-planning :refer [business-tax-planning]]
             [twist-of-carts.views.contact :refer [contact]]
             [twist-of-carts.views.personal-tax-return :refer [personal-tax-return]]
+            [twist-of-carts.views.personal-tax-planning :refer [personal-tax-planning]]
             [twist-of-carts.views.professional-info :as pi]
             [twist-of-carts.views.index :as i]))
 
@@ -67,6 +68,7 @@
         ["/international-tax-services/" (page-layout (international-tax-services)) 0.2]
         ["/business-tax-planning/" (page-layout (business-tax-planning)) 0.2]
         ["/personal-tax-return-preparation/" (page-layout (personal-tax-return)) 0.2]
+        ["/personal-tax-planning/" (page-layout (personal-tax-planning)) 0.2]
         ["/contact/" (bare-layout (contact)) 0.2]]
        (apply conj korean-city-routes)
        (apply conj marin-routes)))

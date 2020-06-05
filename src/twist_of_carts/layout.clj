@@ -22,7 +22,7 @@
      [:div.portrait
       [:img {:src "/images/portrait.jpg"}]
       [:div
-       [:p "Young Shin Kim, CPA"]
+       [:p.yk-quote__name "Young Shin Kim, CPA"]
        [:a {:href "/about-young-shin-kim/"} "Learn More About Young &rarr;"]]
       ]
      ]]
@@ -63,13 +63,12 @@
          [:a.navbar-item {:href "/"} "Business Tax Return Preparation"]
          [:a.navbar-item {:href "/international-tax-services/"} "International Tax Services"]
          [:a.navbar-item {:href "/"} "International Accounting Services"]
-         [:a.navbar-item {:href "/"} "Business Consulting"]
          [:a.navbar-item {:href "/business-tax-planning/"} "Business Tax Planning"]]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Personal Services"]
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]
-         [:a.navbar-item {:href "/"} "Personal Tax Planning"]
+         [:a.navbar-item {:href "/personal-tax-planning/"} "Personal Tax Planning"]
          ]]
        [:a.navbar-item {:href "/contact/"}
           "Contact Us"]]
@@ -83,7 +82,6 @@
          [:i.fas.fa-envelope]
          "&nbsp;&nbsp;&nbsp;Get In Touch"]]]]]
     [:div content]
-    young-kim-quote
     [:footer.footer.ykas-footer
      [:div.columns
       [:div.column
@@ -100,13 +98,12 @@
         [:li [:a {:href "/"} "Tax Return Preparation"]]
         [:li [:a {:href "/international-tax-services/"} "International Tax Services"]]
         [:li [:a {:href "/"} "International Accounting Services"]]
-        [:li [:a {:href "/"} "Business Consulting"]]
         [:li [:a {:href "/business-tax-planning/"} "Tax Planning"]]]]
       [:div.column
        [:span.ykas-footer__nav-list-header "Personal Services"]
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]]
-        [:li [:a {:href "/"} "Tax Planning"]]]]
+        [:li [:a {:href "/personal-tax-planning/"} "Tax Planning"]]]]
       [:div.column]
       [:div.column
        [:p "Young Kim Accounting Solutions"]
@@ -134,11 +131,37 @@
 (defn wrap-content-with-testimonial [content]
   [:div
    [:div content]
-   [:div.midsection-cta
-    [:h1 "Testimonial"]]])
+   [:section.hero
+    [:div.testimonial__wrapper.hero-body
+     [:div.testimonial.container
+      [:h2.testimonial__title "What Are Our Current Clients Saying?"]
+      [:div.columns
+       [:div.column.is-one-third
+        [:div.columns
+         [:div.column.is-two-thirds
+          [:h3.testimonial__name "Paul S. Chun"]
+          [:div "CEO &amp; Founder, Elbower"]
+          [:div "Tokyo, Japan"]
+          [:div "Business & Personal Client Since 2005"]]
+         [:div.column.is-one-third
+          [:img.testimonial__portrait {:src "/images/paul-portrait.jpg"}]]
+         ]]
+       [:div.column.is-two-thirds
+        [:p.testimonial__quote "&ldquo;I've never even considered looking elsewhere after I started working with Young Kim Accounting Solutions. She's helped clarify all of my uncertainties, and she's also informed me of policies in international taxation that I'd otherwise be completely unaware of, which resulted in substantial savings. I'd be lost without her services, plain and simple.&rdquo;"]]
+       ]
+      ]]]])
+
+(defn wrap-content-with-quote [content]
+  [:div
+   [:div content]
+   young-kim-quote])
 
 (defn page-layout [options]
-  (bare-layout (update options :content wrap-content-with-cta)))
+  (bare-layout (-> options
+                   (update :content wrap-content-with-cta)
+                   (update :content wrap-content-with-testimonial)
+                   (update :content wrap-content-with-quote)
+                   )))
 
 (defn testimonial-bottom-layout [options]
   (bare-layout (update options :content wrap-content-with-testimonial)))

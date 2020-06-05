@@ -56,7 +56,7 @@
                   :border-color black}]]]
      [:.ykas-hero {:background "url('/images/skyline-faded.jpg')"
                    :background-size "cover"}]
-     [:.ykas-hero-black {:background-color soot
+     [:.ykas-hero-black {:background-color pewter
                          :color sahara
                          :background-size "cover"}
       [:a {:color white}]
@@ -90,7 +90,7 @@
      [:.green-check {:color "limegreen"}]
      [:.yk-quote {:background-color soot
                   :color sahara}
-      [:&__highlight {:background-color sahara
+      [:&__highlight {:background-color snow-1
                       :color soot
                       :margin "0 auto"
                       :border-radius "50%"
@@ -104,9 +104,11 @@
       [:&__quote {:font-style "italic"
                   :font-size "1.5em"
                   :text-align "center"
+                  :color white
                   :margin "1.5em 1em"}]
       [:&__text {:text-size "0.9em"
                  :margin "0 1.5em"}]
+      [:&__name {:font-size "1.25em"}]
       [:a {:color sahara}]
       ]
      [:.contact-form
@@ -126,4 +128,19 @@
                 :transition "background-color .5s"}
        [:&:hover {:background-color black}]]
       ]
+     [:.testimonial {:text-align "center"
+                     :padding "0 1em"}
+      [:&__title :&__name {:color white
+                           :font-size "1.5em"}]
+      [:&__title {:margin-bottom "4em"
+                  :font-size "1.75em"}]
+      [:&__wrapper {:background-color pewter
+                    :color sahara}]
+      [:&__quote {:font-size "1.25em"
+                  :line-height "2em"
+                  :font-style "italic"}]
+      [:&__portrait {:border (str "5px solid " sahara)
+                     :height "160px"
+                     }]
+       ]
      ]))
