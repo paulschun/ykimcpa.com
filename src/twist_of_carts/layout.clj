@@ -61,9 +61,9 @@
         [:span.navbar-link "Business Services"]
         [:div.navbar-dropdown
          [:a.navbar-item {:href "/"} "Business Tax Return Preparation"]
-         [:a.navbar-item {:href "/international-tax-services/"} "International Tax Services"]
-         [:a.navbar-item {:href "/"} "International Accounting Services"]
-         [:a.navbar-item {:href "/business-tax-planning/"} "Business Tax Planning"]]]
+         [:a.navbar-item {:href "/business-tax-planning/"} "Business Tax Planning"]
+         [:a.navbar-item {:href "/international-tax-services/"} "International Tax &amp; Accounting Services"]
+         ]]
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Personal Services"]
         [:div.navbar-dropdown
@@ -147,7 +147,7 @@
           [:img.testimonial__portrait {:src "/images/paul-portrait.jpg"}]]
          ]]
        [:div.column.is-two-thirds
-        [:p.testimonial__quote "&ldquo;I've never even considered looking elsewhere after I started working with Young Kim Accounting Solutions. She's helped clarify all of my uncertainties, and she's also informed me of policies in international taxation that I'd otherwise be completely unaware of, which resulted in substantial savings. I'd be lost without her services, plain and simple.&rdquo;"]]
+        [:p.testimonial__quote "&ldquo;I've never even considered looking elsewhere after I started working with Young Kim Accounting Solutions. She's helped clarify all of my uncertainties, and she's also informed me of policies in international taxation that I'd otherwise be completely unaware of, which have been huge breaks for me. I'd be lost without her services, plain and simple.&rdquo;"]]
        ]
       ]]]])
 
