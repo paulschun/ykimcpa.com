@@ -60,7 +60,7 @@
        [:div.navbar-item.has-dropdown.is-hoverable
         [:span.navbar-link "Business Services"]
         [:div.navbar-dropdown
-         [:a.navbar-item {:href "/"} "Business Tax Return Preparation"]
+         [:a.navbar-item {:href "/business-tax-return-preparation/"} "Business Tax Return Preparation"]
          [:a.navbar-item {:href "/business-tax-planning/"} "Business Tax Planning"]
          [:a.navbar-item {:href "/international-tax-services/"} "International Tax &amp; Accounting Services"]
          ]]
@@ -95,15 +95,14 @@
       [:div.column
        [:span.ykas-footer__nav-list-header "Business Services"]
        [:ul.ykas-footer__nav-list
-        [:li [:a {:href "/"} "Tax Return Preparation"]]
-        [:li [:a {:href "/international-tax-services/"} "International Tax Services"]]
-        [:li [:a {:href "/"} "International Accounting Services"]]
-        [:li [:a {:href "/business-tax-planning/"} "Tax Planning"]]]]
+        [:li [:a {:href "/business-tax-return-preparation/"} "Business Tax Return Preparation"]]
+        [:li [:a {:href "/business-tax-planning/"} "Business Tax Planning"]]
+        [:li [:a {:href "/international-tax-services/"} "International Tax &amp; Accounting Services"]]]]
       [:div.column
        [:span.ykas-footer__nav-list-header "Personal Services"]
        [:ul.ykas-footer__nav-list
         [:li [:a {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation"]]
-        [:li [:a {:href "/personal-tax-planning/"} "Tax Planning"]]]]
+        [:li [:a {:href "/personal-tax-planning/"} "Personal Tax Planning"]]]]
       [:div.column]
       [:div.column
        [:p "Young Kim Accounting Solutions"]
@@ -147,7 +146,7 @@
           [:img.testimonial__portrait {:src "/images/paul-portrait.jpg"}]]
          ]]
        [:div.column.is-two-thirds
-        [:p.testimonial__quote "&ldquo;I've never even considered looking elsewhere after I started working with Young Kim Accounting Solutions. She's helped clarify all of my uncertainties, and she's also informed me of policies in international taxation that I'd otherwise be completely unaware of, which have been huge breaks for me. I'd be lost without her services, plain and simple.&rdquo;"]]
+        [:p.testimonial__quote "&ldquo;I've never even considered looking elsewhere after I started working with Young Kim Accounting Solutions. Young has helped clarify all of my uncertainties, and she's also informed me of policies in international taxation that I'd otherwise be completely unaware of, which have been huge breaks for me. I'd be lost without her services, plain and simple.&rdquo;"]]
        ]
       ]]]])
 
