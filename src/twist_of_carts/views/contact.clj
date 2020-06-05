@@ -7,7 +7,7 @@
    :content [:div
              [:section
               [:div.container.pad-vertical
-               [:h1.title "Contact Young Kim Account Solutions"]
+               [:h1.title "Contact Young Kim Accounting Solutions"]
                [:h2.subtitle "Want to get in touch? Here are your options:"]
                [:div.columns
 

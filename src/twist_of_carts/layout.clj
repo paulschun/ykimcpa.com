@@ -74,7 +74,7 @@
           "Contact Us"]]
       [:div.navbar-end
        [:span.navbar-item
-        [:small "Call: (415) 555-5555"]]
+        [:small "Call: +1 (415) 488-7192"]]
        [:div.navbar-item
         [:a.button.hire-me.ykas-btn {:href "/contact/"}
          [:i.fas.fa-phone]
@@ -106,10 +106,10 @@
       [:div.column]
       [:div.column
        [:p "Young Kim Accounting Solutions"]
-       [:p "1 6th Ave"]
+       [:p "550 6th Ave"]
        [:p "San Francisco, CA 94118"]
        [:p "&nbsp;"]
-       [:p "(415) 555-5555"]
+       [:p "+1 (415) 488-7192"]
        [:p "&nbsp;"]
        [:small "Copyright &copy; 2020 Young Kim Accounting Solutions. All rights reserved."]
        ]]]

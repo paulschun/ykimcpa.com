@@ -32,17 +32,15 @@
                  [:div.column
                   [:div.ykas-hero-header "Business Services"]
                   [:ul.ykas-hero-list
-                   [:li [:a {:href "/"} "Corporate Tax Return Preparation &rarr;"]]
-                   [:li [:a {:href "/"} "Small/Home Business Tax Return Preparation &rarr;"]]
-                   [:li [:a {:href "/"} "International Taxation Services &rarr;"]]
-                   [:li [:a {:href "/"} "International Accounting Services &rarr;"]]
-                   [:li [:a {:href "/"} "Business Consulting &rarr;"]]
-                   [:li [:a {:href "/"} "Tax Planning &rarr;"]]]]
+                   [:li [:a {:href "/business-tax-return-preparation/"} "Business Tax Return Preparation &rarr;"]]
+                   [:li [:a {:href "/business-tax-planning/"} "Business Tax Planning &rarr;"]]
+                   [:li [:a {:href "/international-tax-services/"} "International Tax &amp; Accounting Services &rarr;"]]
+]]
                  [:div.column
                   [:div.ykas-hero-header "Personal Services"]
                   [:ul.ykas-hero-list
-                   [:li [:a {:href "/"} "Personal Tax Return Preparation &rarr;"]]
-                   [:li [:a {:href "/"} "Personal Tax Planning &rarr;"]]]]
+                   [:li [:a {:href "/personal-tax-return-preparation/"} "Personal Tax Return Preparation &rarr;"]]
+                   [:li [:a {:href "/personal-tax-planning/"} "Personal Tax Planning &rarr;"]]]]
                  [:div.column]
                  [:div.column.portrait
                   [:img {:src "/images/tax-forms.jpg" :style "max-width: 320px"}]]]]]
